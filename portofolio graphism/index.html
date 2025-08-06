@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphisme</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css  ">
+</body>
+</html>
+<header>
+    <h1>Kylgraph</h1>
+    <nav>
+        <a href="#banner">Banner</a>
+        <a href="#pfp">PFP</a>
+        <a href="#thumbnail">Thumbnail</a>
+        <a href="#contact">Contact</a>
+        <a class="paypal-btn" href="#" id="open-don">Don</a>
+    </nav>
+</header>
+
+<div class="price-cards">
+    <div class="price-card">PFP <span>3€</span></div>
+    <div class="price-card">Banner <span>4€</span></div>
+    <div class="price-card">Thumbnail <span>3.50€</span></div>
+</div>
+
+<section id="banner">
+    <h2>Banners</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="img/banner/banner bob l'éponge kyllag_00000.png" alt="Banner youtube">
+            <p>Banner youtube</p>
+        </div>
+        <div class="item">
+            <img src="img/banner/banner kyllag makima_00000.png" alt="Banner Disocrd">
+            <p>Banner Disocrd</p>
+        </div>
+        <div class="item">
+            <img src="img/banner/banner power kyllag roseeee_00000.png" alt="Banner Discord">
+            <p>Banner Discord</p>
+        </div>
+        <div class="item">
+            <img src="img/banner/banner miku nakano for shinji by kyllag_00000.png" alt="Banner youtube">
+            <p>Banner youtube</p>
+        </div>
+        <div class="item">
+            <img src="img/banner/Banner discord serv for THIBO by kyllag_00000.png" alt="Banner Discord server">
+            <p>Banner Discord server</p>
+        </div>
+        <div class="item">
+            <img src="img/banner/qsd.png" alt="Banner Discord">
+            <p>Banner Discord </p>
+    </div>
+</section>
+<section id="pfp">
+    <h2>PFP</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="img/pfp/pdp kylgraph_00000.png" alt="Pfp Shinji">
+            <p>PFP Shinji</p>
+        </div>
+        <div class="item">
+            <img src="img/pfp/pdp_gumball_by_kyllag.png" alt="PFP Gumball">
+            <p>PFP Gumball</p>
+        </div>
+        <div class="item">
+            <img src="img/pfp/pp isagi by kyllag for Maska_00000.png" alt="PFP Isagi">
+            <p>PFP Isagi</p>
+        </div>
+        <div class="item">
+            <img src="img/pfp/pp gojo pour kyllag style akun_00000.png" alt="PFP gojo">
+            <p>PFP 4</p>
+        </div>
+        <div class="item">
+            <img src="img/pfp/logo for yaniss.png" alt="PFP Gumball2">
+            <p>PFP 5</p>
+        </div>
+    </div>
+</section>
+<section id="thumbnail">
+    <h2>Thumbnails</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="img/thumbnail/essaie de miniature2_00000.png" alt="Thumbnail 1">
+            <p>Thumbnail 1</p>
+        </div>
+        <div class="item">
+            <img src="img/thumbnail/essaie de miniature_00000.png" alt="Thumbnail 2">
+            <p>Thumbnail 2</p>
+        </div>
+        <div class="item">
+            <img src="img/thumbnail/minia bloxfruit_00000.png" alt="Thumbnail 3">
+            <p>Thumbnail 3</p>
+        </div>
+        <div class="item">
+            <img src="img/thumbnail/minia squid game roblox yaniss_00000.png" alt="Thumbnail 4">
+            <p>Thumbnail 4</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Instagram : <a href="https://www.instagram.com/kylgraph" target="_blank">https://www.instagram.com/kylgraph</a></p>
+</section>
+<footer>
+    <p>&copy; 2025 Portfolio Graphisme</p>
+</footer>
+
+<!-- Modal for Don -->
+<div class="don-modal" id="don-modal">
+    <div class="don-content" id="don-content">
+        <h3>mail for paypall : fabioduarte112012@gmail.com</h3>
+    </div>
+</div>
+</body>
+<script>
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+document.getElementById('open-don').addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById('don-modal');
+    const content = document.getElementById('don-content');
+    modal.style.display = 'flex';
+    setTimeout(() => content.classList.add('show'), 10);
+});
+document.getElementById('don-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        const modal = document.getElementById('don-modal');
+        const content = document.getElementById('don-content');
+        content.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    }
+});
+</script>
+</html>
